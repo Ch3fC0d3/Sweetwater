@@ -584,12 +584,9 @@ export default function SweetwaterHeliumPage() {
       <section id="process" className="bg-[#1E2530] reveal">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em]" style={{ color: brand.accent }}>
-              Defined structure
-            </p>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Model to deliver shareholder value</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">From prospect to production</h2>
             <p className="mt-4 text-slate-300">
-              A disciplined sequence keeps projects bankable and community-aligned. Each Milestone unlocks the next, from early geology to full-scale production.
+              A clear sequence of milestones guides the project from early identification and leasing through drilling, reserves, and production.
             </p>
           </div>
           <div className="process-grid mt-10">
