@@ -235,7 +235,7 @@ export default function SweetwaterHeliumPage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#13171C]/95 backdrop-blur border-b border-white/10">
         <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
           <div className="flex items-center">
-            <img src="/images/logo.png" alt="Sweetwater Helium" className="h-16 w-auto md:h-20" />
+            <img src="/images/logo.png" alt="Sweetwater Helium" className="h-10 w-auto md:h-12" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm" style={{ color: "#94A3B8" }}>
             <a href="#mission" className="hover:text-white">
