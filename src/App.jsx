@@ -115,6 +115,8 @@ export default function SweetwaterHeliumPage() {
 
   const [lightboxImage, setLightboxImage] = useState(null);
   const [activeProperty, setActiveProperty] = useState({ name: "", token: 0 });
+  const [newsArticles, setNewsArticles] = useState([]);
+  const [newsLoading, setNewsLoading] = useState(true);
   const propertyTimeoutRef = useRef(null);
 
   const openLightbox = (src, alt) => setLightboxImage({ src, alt });
@@ -216,6 +218,18 @@ export default function SweetwaterHeliumPage() {
   }, [lightboxImage]);
 
   useEffect(() => {
+    fetch("/.netlify/functions/news")
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.articles) {
+          setNewsArticles(data.articles.filter((a) => a.title !== "[Removed]"));
+        }
+      })
+      .catch(() => {})
+      .finally(() => setNewsLoading(false));
+  }, []);
+
+  useEffect(() => {
     return () => {
       if (propertyTimeoutRef.current) {
         clearTimeout(propertyTimeoutRef.current);
@@ -267,6 +281,9 @@ export default function SweetwaterHeliumPage() {
             </a>
             <a href="#gallery" className="hover:text-white">
               Gallery
+            </a>
+            <a href="#news" className="hover:text-white">
+              News
             </a>
             <a href="#contact" className="hover:text-white">
               Contact
@@ -609,6 +626,72 @@ export default function SweetwaterHeliumPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* NEWS */}
+      <section id="news" className="bg-[#13171C] border-y border-white/10 reveal">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-10">In the news</h2>
+          {newsLoading ? (
+            <div className="text-slate-400">Loading news…</div>
+          ) : newsArticles.length === 0 ? (
+            <div className="text-slate-400">No articles found.</div>
+          ) : (
+            <div className="grid lg:grid-cols-[1fr_1fr] gap-6">
+              {/* Featured article */}
+              {newsArticles[0] && (
+                <a
+                  href={newsArticles[0].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-2xl border border-white/10 bg-[#1E2530] p-8 flex flex-col justify-between hover:border-cyan-500/40 transition group"
+                >
+                  <div>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold" style={{ background: brand.primaryDark, color: brand.primary }}>01</span>
+                      <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: brand.primary }}>Featured Story</span>
+                    </div>
+                    <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">
+                      {newsArticles[0].source?.name} &bull; {new Date(newsArticles[0].publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                    </p>
+                    <h3 className="text-2xl font-extrabold leading-snug text-slate-100 group-hover:text-cyan-300 transition">{newsArticles[0].title}</h3>
+                    {newsArticles[0].description && (
+                      <p className="mt-4 text-slate-300 leading-relaxed line-clamp-3">{newsArticles[0].description}</p>
+                    )}
+                  </div>
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold" style={{ color: brand.primary }}>
+                    Read story <ArrowRight className="h-4 w-4" />
+                  </div>
+                </a>
+              )}
+              {/* Secondary articles */}
+              <div className="flex flex-col gap-4">
+                {newsArticles.slice(1, 5).map((article, idx) => (
+                  <a
+                    key={idx}
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-xl border border-white/10 bg-[#1E2530] p-5 flex gap-4 hover:border-cyan-500/40 transition group"
+                  >
+                    <span className="flex-shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold" style={{ background: brand.primaryDark, color: brand.primary }}>
+                      {String(idx + 2).padStart(2, "0")}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-xs text-slate-400 uppercase tracking-widest mb-1">
+                        {article.source?.name} &bull; {new Date(article.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                      </p>
+                      <h3 className="font-bold text-slate-100 leading-snug group-hover:text-cyan-300 transition line-clamp-2">{article.title}</h3>
+                      {article.description && (
+                        <p className="mt-1 text-sm text-slate-400 line-clamp-2">{article.description}</p>
+                      )}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
