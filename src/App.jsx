@@ -297,7 +297,7 @@ export default function SweetwaterHeliumPage() {
               />
             </div>
             <div className="max-w-xl space-y-6">
-              <p className="text-2xl md:text-3xl leading-snug font-medium" style={{ color: "#DDE3EA" }}>
+              <p className="text-3xl md:text-4xl leading-snug font-medium" style={{ color: "#DDE3EA" }}>
                 Clean, quiet, and sustainable helium production—built around respect for the land, water, and nearby families.
               </p>
               <p className="text-base font-semibold uppercase tracking-[0.18em] text-slate-400">
