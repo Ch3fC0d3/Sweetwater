@@ -287,60 +287,35 @@ export default function SweetwaterHeliumPage() {
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-black/55 backdrop-blur-sm" aria-hidden="true" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-1 pb-0">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
-            <div className="max-w-3xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-12 pb-16">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
+            <div className="flex-shrink-0">
               <img
                 src="/images/logo.png"
                 alt="Sweetwater Helium"
                 className="w-auto h-[18rem] md:h-[22rem] xl:h-[26rem]"
               />
-              <div className="mt-[-2rem] md:mt-[-2.5rem] lg:mt-[-3rem] space-y-1">
-                <p className="text-lg md:text-xl" style={{ color: "#DDE3EA" }}>
-                  Clean, quiet, and sustainable helium production—built around respect for the land, water, and nearby families.
-                </p>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
-                  100% carbon-neutral helium operations
-                </p>
-                <div className="flex flex-wrap items-center gap-3">
-                  <a
-                    href="#facts"
-                    className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-white hover:bg-slate-800 transition"
-                  >
-                    Explore the facts <ArrowRight className="h-4 w-4" />
-                  </a>
-                  <a
-                    href="#community"
-                    className="inline-flex items-center gap-2 rounded-full border border-slate-600 px-5 py-3 text-slate-100 hover:bg-white/10 transition"
-                  >
-                    Community first
-                  </a>
-                </div>
-              </div>
             </div>
-            <div className="relative w-full md:w-[500px] md:-mt-[5.5rem] lg:-mt-[6.5rem]">
-              <div className="flex items-center justify-center orbit-carrier">
-                <div className="relative orbit-depth">
-                  <div
-                    className="rounded-full border-2"
-                    style={{ borderColor: brand.primary, height: "26rem", width: "26rem" }}
-                  />
-                  <div className="absolute inset-0 rounded-full border pulse-ring" style={{ borderColor: brand.accent }} />
-                  <div className="absolute inset-0 orbit-spin">
-                    <div
-                      className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full"
-                      style={{ background: brand.primaryDark, height: "3.5rem", width: "3.5rem" }}
-                    />
-                    <div
-                      className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 rounded-full"
-                      style={{ background: brand.primaryDark, height: "3.5rem", width: "3.5rem" }}
-                    />
-                  </div>
-                  <div
-                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full shadow"
-                    style={{ background: brand.accent, height: "4.25rem", width: "4.25rem" }}
-                  />
-                </div>
+            <div className="max-w-xl space-y-6">
+              <p className="text-lg md:text-xl leading-relaxed" style={{ color: "#DDE3EA" }}>
+                Clean, quiet, and sustainable helium production—built around respect for the land, water, and nearby families.
+              </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
+                100% carbon-neutral helium operations
+              </p>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <a
+                  href="#facts"
+                  className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3.5 text-white hover:bg-slate-800 transition"
+                >
+                  Explore the facts <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="#community"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-600 px-6 py-3.5 text-slate-100 hover:bg-white/10 transition"
+                >
+                  Community first
+                </a>
               </div>
             </div>
           </div>
