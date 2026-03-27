@@ -32,8 +32,8 @@ const brand = {
   accent: "#E6A24D",
   darkBg: "#1B1F24",
   lightBg: "#F6F3EE",
-  text: "#2E2E2E",
-  muted: "#7C807A",
+  text: "#DDE3EA",
+  muted: "#94A3B8",
 };
 
 export default function SweetwaterHeliumPage() {
@@ -225,50 +225,50 @@ export default function SweetwaterHeliumPage() {
 
   return (
     <div
-      className="min-h-screen w-full relative text-slate-900 overflow-x-hidden"
-      style={{ background: "#ffffff" }}
+      className="min-h-screen w-full relative text-slate-100 overflow-x-hidden"
+      style={{ background: "#13171C" }}
     >
       {/* Subtle patterned backdrop */}
       <div aria-hidden className="hidden" />
 
       {/* NAVBAR */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#13171C]/95 backdrop-blur border-b border-white/10">
         <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
           <div className="flex items-center">
-            <img src="/images/sweetwaterlogo.png" alt="Sweetwater Helium" className="h-16 w-auto md:h-20" />
+            <img src="/images/logo.png" alt="Sweetwater Helium" className="h-16 w-auto md:h-20" />
           </div>
-          <nav className="hidden md:flex items-center gap-6 text-sm" style={{ color: brand.muted }}>
-            <a href="#mission" className="hover:text-black">
+          <nav className="hidden md:flex items-center gap-6 text-sm" style={{ color: "#94A3B8" }}>
+            <a href="#mission" className="hover:text-white">
               Mission
             </a>
-            <a href="#proposal" className="hover:text-black">
+            <a href="#proposal" className="hover:text-white">
               Overview
             </a>
-            <a href="#facts" className="hover:text-black">
+            <a href="#facts" className="hover:text-white">
               Facts
             </a>
-            <a href="#uses" className="hover:text-black">
+            <a href="#uses" className="hover:text-white">
               Uses
             </a>
-            <a href="#technology" className="hover:text-black">
+            <a href="#technology" className="hover:text-white">
               Technology
             </a>
-            <a href="#geology" className="hover:text-black">
+            <a href="#geology" className="hover:text-white">
               Geology
             </a>
-            <a href="#process" className="hover:text-black">
+            <a href="#process" className="hover:text-white">
               Process
             </a>
-            <a href="#environment" className="hover:text-black">
+            <a href="#environment" className="hover:text-white">
               Environment
             </a>
-            <a href="#community" className="hover:text-black">
+            <a href="#community" className="hover:text-white">
               Community
             </a>
-            <a href="#gallery" className="hover:text-black">
+            <a href="#gallery" className="hover:text-white">
               Gallery
             </a>
-            <a href="#contact" className="hover:text-black">
+            <a href="#contact" className="hover:text-white">
               Contact
             </a>
           </nav>
@@ -286,20 +286,20 @@ export default function SweetwaterHeliumPage() {
           playsInline
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-sm" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/55 backdrop-blur-sm" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-1 pb-0">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
             <div className="max-w-3xl">
               <img
-                src="/images/sweetwaterlogo.png"
+                src="/images/logo.png"
                 alt="Sweetwater Helium"
                 className="w-auto h-[34rem] md:h-[40rem] xl:h-[50rem]"
               />
               <div className="mt-[-4.5rem] md:mt-[-5.5rem] lg:mt-[-6.5rem] space-y-1">
-                <p className="text-lg md:text-xl" style={{ color: brand.text }}>
+                <p className="text-lg md:text-xl" style={{ color: "#DDE3EA" }}>
                   Clean, quiet, and sustainable helium production—built around respect for the land, water, and nearby families.
                 </p>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
                   100% carbon-neutral helium operations
                 </p>
                 <div className="flex flex-wrap items-center gap-3">
@@ -311,7 +311,7 @@ export default function SweetwaterHeliumPage() {
                   </a>
                   <a
                     href="#community"
-                    className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-3 text-slate-800 hover:bg-white transition"
+                    className="inline-flex items-center gap-2 rounded-full border border-slate-600 px-5 py-3 text-slate-100 hover:bg-white/10 transition"
                   >
                     Community first
                   </a>
@@ -348,17 +348,17 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* PROPOSAL / OVERVIEW */}
-      <section id="proposal" className="bg-sand border-y border-slate-200 reveal">
+      <section id="proposal" className="bg-[#1E2530] border-y border-white/10 reveal">
         <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Project overview</h2>
-            <p className="mt-4 text-slate-700">
+            <p className="mt-4 text-slate-300">
               In nearby legacy oil exploration, companies found deep ancient seawater over a mile down—mixed with trapped ancient air. Over geologic time, unique conditions enriched this air with helium. Sweetwater proposes a dedicated helium well to responsibly access this resource, with commitments to local jobs, infrastructure, education, and full site restoration.
             </p>
           </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="rounded-2xl border border-white/10 bg-[#1E2530] p-6 shadow-sm">
             <h3 className="text-lg font-semibold">Immediate community support</h3>
-            <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-2">
+            <ul className="mt-3 list-disc pl-5 text-slate-300 space-y-2">
               <li>Infrastructure funding for wells, irrigation, and essential projects.</li>
               <li>Scholarships and research support focused on water solutions.</li>
               <li>Local hiring with training pathways for technical roles.</li>
@@ -369,14 +369,14 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* FACTS */}
-      <section id="facts" className="relative border-y border-slate-200 bg-sage reveal">
+      <section id="facts" className="relative border-y border-white/10 bg-[#1E2530] reveal">
         <div className="bubble-overlay" aria-hidden />
         <div className="relative z-[1] mx-auto max-w-7xl px-6 py-16 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-12 items-center">
           <div className="relative flex justify-center">
-            <div className="relative h-72 w-72 md:h-80 md:w-80 rounded-full border-4 border-cyan-200 bg-gradient-to-br from-cyan-50 via-white to-cyan-100 shadow-xl">
-              <div className="absolute inset-6 rounded-full border-2 border-cyan-300/80" />
+            <div className="relative h-72 w-72 md:h-80 md:w-80 rounded-full border-4 border-cyan-500/30 bg-gradient-to-br from-cyan-900/30 via-slate-900 to-cyan-800/30 shadow-xl">
+              <div className="absolute inset-6 rounded-full border-2 border-cyan-500/30" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-40 w-40 md:h-48 md:w-48 rounded-full bg-white/80 border border-cyan-200 flex items-center justify-center text-4xl md:text-5xl font-extrabold text-slate-800 shadow-inner">
+                <div className="h-40 w-40 md:h-48 md:w-48 rounded-full bg-slate-900/80 border border-cyan-500/30 flex items-center justify-center text-4xl md:text-5xl font-extrabold text-cyan-300 shadow-inner">
                   He
                 </div>
               </div>
@@ -392,7 +392,7 @@ export default function SweetwaterHeliumPage() {
                 The properties of helium
               </p>
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Unique traits that power its value</h2>
-              <p className="text-slate-600 max-w-2xl">
+              <p className="text-slate-400 max-w-2xl">
                 Helium is best known for being lighter than air, but it actually has many unique qualities that make it important
                 for modern technology and industrial applications.
               </p>
@@ -417,8 +417,8 @@ export default function SweetwaterHeliumPage() {
                       <Icon className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-slate-900 helium-title">{title}</h3>
-                      <p className="text-sm text-slate-600">{description}</p>
+                      <h3 className="text-lg font-semibold text-slate-100 helium-title">{title}</h3>
+                      <p className="text-sm text-slate-400">{description}</p>
                     </div>
                   </button>
                 );
@@ -429,7 +429,7 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* USES */}
-      <section id="uses" className="bg-sand reveal">
+      <section id="uses" className="bg-[#1E2530] reveal">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Technology powered by helium</h2>
           <div className="mt-6 grid md:grid-cols-3 gap-4">
@@ -447,11 +447,11 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* GEOLOGY */}
-      <section id="geology" className="bg-sage border-y border-slate-200 reveal">
+      <section id="geology" className="bg-[#1E2530] border-y border-white/10 reveal">
         <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">How helium accumulates</h2>
-            <ul className="mt-4 space-y-2 text-slate-700">
+            <ul className="mt-4 space-y-2 text-slate-300">
               <li>Source: Thorium/uranium decay in certain rocks generates helium.</li>
               <li>Release: Heating & fluids liberate helium into water/gas phases.</li>
               <li>Migration: Faults and fractures provide pathways.</li>
@@ -459,9 +459,9 @@ export default function SweetwaterHeliumPage() {
               <li>Time: Ancient systems often favor enrichment.</li>
             </ul>
           </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="rounded-2xl border border-white/10 bg-[#1E2530] p-6 shadow-sm">
             <h3 className="text-lg font-semibold">Regional context</h3>
-            <p className="mt-2 text-slate-700">
+            <p className="mt-2 text-slate-300">
               Nearby legacy wells showed no commercial oil/gas, aligning the area with helium-forward potential consistent with regional production.
             </p>
           </div>
@@ -469,21 +469,21 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* ENVIRONMENT */}
-      <section id="environment" className="bg-sage border-y border-slate-200 reveal">
+      <section id="environment" className="bg-[#1E2530] border-y border-white/10 reveal">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Designed to be clean, quiet, and neighbor-friendly</h2>
           <div className="mt-6 grid md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-slate-200 p-6 bg-white">
+            <div className="rounded-2xl border border-white/10 p-6 bg-[#1E2530]">
               <h3 className="text-lg font-semibold">Safety & environment</h3>
-              <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-2">
+              <ul className="mt-3 list-disc pl-5 text-slate-300 space-y-2">
                 <li>Inert, non-toxic, non-flammable gas; no flaring in normal operation.</li>
                 <li>Closed-loop process; zero routine chemical waste.</li>
                 <li>Continuous monitoring by trained staff.</li>
               </ul>
             </div>
-            <div className="rounded-2xl border border-slate-200 p-6 bg-white">
+            <div className="rounded-2xl border border-white/10 p-6 bg-[#1E2530]">
               <h3 className="text-lg font-semibold">Neighbors & noise</h3>
-              <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-2">
+              <ul className="mt-3 list-disc pl-5 text-slate-300 space-y-2">
                 <li>Acoustically insulated enclosures for compressors/purifiers.</li>
                 <li>Compact layout to minimize visual and acoustic impact.</li>
                 <li>Suitable near existing roads and utilities subject to permitting.</li>
@@ -494,22 +494,22 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* COMMUNITY (appeal without naming) */}
-      <section id="community" className="bg-sand reveal">
+      <section id="community" className="bg-[#1E2530] reveal">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Community first</h2>
           <div className="mt-6 grid md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-slate-200 p-6 bg-white">
+            <div className="rounded-2xl border border-white/10 p-6 bg-[#1E2530]">
               <h3 className="text-lg font-semibold">What neighbors can expect</h3>
-              <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-2">
+              <ul className="mt-3 list-disc pl-5 text-slate-300 space-y-2">
                 <li>Low-profile facilities that blend with the landscape.</li>
                 <li>Employment & training with a focus on nearby residents.</li>
                 <li>Scholarships and youth programs in science/skills.</li>
                 <li>Transparent communication throughout construction and operations.</li>
               </ul>
             </div>
-            <div className="rounded-2xl border border-slate-200 p-6 bg-white">
+            <div className="rounded-2xl border border-white/10 p-6 bg-[#1E2530]">
               <h3 className="text-lg font-semibold">Our commitments</h3>
-              <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-2">
+              <ul className="mt-3 list-disc pl-5 text-slate-300 space-y-2">
                 <li>Independent monitoring of air, water, and sound—shared publicly.</li>
                 <li>Trust-funded reserves for future well plugging & site restoration.</li>
                 <li>Infrastructure funding with community input.</li>
@@ -517,9 +517,9 @@ export default function SweetwaterHeliumPage() {
               </ul>
             </div>
           </div>
-          <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
+          <div className="mt-6 rounded-2xl border border-white/10 bg-[#1E2530] p-6">
             <h3 className="text-lg font-semibold">Listening & partnership</h3>
-            <p className="mt-2 text-slate-700">
+            <p className="mt-2 text-slate-300">
               We meet with local leaders, chapters, and families to understand priorities, incorporate feedback, and build long-term value close to home.
             </p>
           </div>
@@ -527,17 +527,17 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* TECHNOLOGY WE ARE ADDING */}
-      <section id="technology" className="bg-sage border-y border-slate-200 reveal">
+      <section id="technology" className="bg-[#1E2530] border-y border-white/10 reveal">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Technology we’re researching</h2>
-              <p className="mt-4 text-slate-700 leading-relaxed">
+              <p className="mt-4 text-slate-300 leading-relaxed">
                 We are advancing a compact, hypersaline treatment train that integrates membrane separation with closed-loop
                 reinjection. This design minimizes surface impacts while preserving the quality of local water and soil systems.
                 The illustration highlights the three core modular options under evaluation for the Sweetwater Helium site.
               </p>
-              <ul className="mt-6 space-y-3 text-slate-700">
+              <ul className="mt-6 space-y-3 text-slate-300">
                 <li className="flex gap-3">
                   <span className="mt-2 h-2.5 w-2.5 rounded-full" style={{ background: brand.accent }} />
                   Modular treatment skids sized for rapid deployment and easy servicing.
@@ -553,7 +553,7 @@ export default function SweetwaterHeliumPage() {
               </ul>
             </div>
             <figure
-              className="rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white shadow-sm cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-slate-400"
+              className="rounded-2xl overflow-hidden ring-1 ring-white/10 bg-[#1E2530] cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-slate-400"
               role="button"
               tabIndex={0}
               onClick={() => openLightbox("/images/Top3_Options_Hypersaline_AZ.pptx.gif", "Hypersaline treatment configurations under review for the Sweetwater pad.")}
@@ -562,21 +562,21 @@ export default function SweetwaterHeliumPage() {
               <img
                 src="/images/Top3_Options_Hypersaline_AZ.pptx.gif"
                 alt="Top three hypersaline treatment options for Sweetwater"
-                className="w-full h-full object-contain bg-white"
+                className="w-full h-full object-contain bg-[#1E2530]"
                 loading="lazy"
                 decoding="async"
               />
-              <figcaption className="px-4 py-3 text-sm text-slate-600">Hypersaline treatment configurations under review for the Sweetwater pad.</figcaption>
+              <figcaption className="px-4 py-3 text-sm text-slate-400">Hypersaline treatment configurations under review for the Sweetwater pad.</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
       {/* GALLERY */}
-      <section id="gallery" className="bg-sand border-y border-slate-200 reveal">
+      <section id="gallery" className="bg-[#1E2530] border-y border-white/10 reveal">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Project gallery</h2>
-          <p className="mt-2 text-slate-600">Swap these placeholders with your actual images or diagrams.</p>
+          <p className="mt-2 text-slate-400">Swap these placeholders with your actual images or diagrams.</p>
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             {[
               { src: "/images/plant-enclosed.png", caption: "Low-noise plant enclosure (concept)" },
@@ -591,14 +591,14 @@ export default function SweetwaterHeliumPage() {
             ].map((img, index) => (
               <figure
                 key={index}
-                className="rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-slate-400"
+                className="rounded-2xl overflow-hidden ring-1 ring-white/10 bg-[#1E2530] cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-slate-400"
                 role="button"
                 tabIndex={0}
                 onClick={() => openLightbox(img.src, img.caption)}
                 onKeyDown={(event) => handleKeyOpen(event, img.src, img.caption)}
               >
                 <img src={img.src} alt={img.caption} className="w-full h-56 object-cover" loading="lazy" decoding="async" />
-                <figcaption className="px-4 py-3 text-sm text-slate-600">{img.caption}</figcaption>
+                <figcaption className="px-4 py-3 text-sm text-slate-400">{img.caption}</figcaption>
               </figure>
             ))}
           </div>
@@ -606,14 +606,14 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* PROCESS */}
-      <section id="process" className="bg-sand reveal">
+      <section id="process" className="bg-[#1E2530] reveal">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em]" style={{ color: brand.accent }}>
               Defined structure
             </p>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Model to deliver shareholder value</h2>
-            <p className="mt-4 text-slate-700">
+            <p className="mt-4 text-slate-300">
               A disciplined sequence keeps projects bankable and community-aligned. Each Milestone unlocks the next, from early geology to full-scale production.
             </p>
           </div>
@@ -641,7 +641,7 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="relative reveal" style={{ background: brand.darkBg }}>
+      <section id="contact" className="relative reveal" style={{ background: "#13171C" }}>
         <div className="mx-auto max-w-7xl px-6 py-16 text-white">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
@@ -661,14 +661,14 @@ export default function SweetwaterHeliumPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-600 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+      <footer className="bg-[#0F1318]">
+        <div className="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-400 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
           <div>© {new Date().getFullYear()} {brand.name}. All rights reserved.</div>
           <div className="flex items-center gap-4">
-            <a href="#mission" className="hover:text-slate-900">
+            <a href="#mission" className="hover:text-white">
               Mission
             </a>
-            <a href="#community" className="hover:text-slate-900">
+            <a href="#community" className="hover:text-white">
               Community
             </a>
           </div>
@@ -706,14 +706,14 @@ export default function SweetwaterHeliumPage() {
 // ===== Reusable Components =====
 function Infocard({ icon, title, bullets }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <div className="flex items-center gap-3 text-slate-700">
+    <div className="rounded-2xl border border-white/10 bg-[#1E2530] p-6">
+      <div className="flex items-center gap-3 text-slate-300">
         <div className="grid place-items-center h-10 w-10 rounded-xl" style={{ background: brand.primary + "15", color: brand.primaryDark }}>
           {icon}
         </div>
-        <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+        <h3 className="text-lg font-semibold text-slate-100">{title}</h3>
       </div>
-      <ul className="mt-4 space-y-2 text-slate-700">
+      <ul className="mt-4 space-y-2 text-slate-300">
         {bullets.map((b, i) => (
           <li key={i} className="flex gap-2">
             <span className="mt-1.5 h-2 w-2 rounded-full" style={{ background: brand.accent }} />
@@ -727,23 +727,23 @@ function Infocard({ icon, title, bullets }) {
 
 function Usecard({ icon, title, children, imageSrc, imageAlt, onImageClick }) {
   return (
-    <div className="rounded-xl border border-slate-200 p-5 bg-white space-y-3">
+    <div className="rounded-xl border border-white/10 p-5 bg-[#1E2530] space-y-3">
       {imageSrc && (
         <button
           type="button"
           onClick={() => onImageClick?.(imageSrc, imageAlt ?? title)}
-          className="h-32 w-full overflow-hidden rounded-lg ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-slate-400"
+          className="h-32 w-full overflow-hidden rounded-lg ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-slate-400"
         >
           <img src={imageSrc} alt={imageAlt ?? title} className="h-full w-full object-cover cursor-zoom-in" loading="lazy" decoding="async" />
         </button>
       )}
-      <div className="flex items-center gap-2 text-slate-800">
+      <div className="flex items-center gap-2 text-slate-100">
         <div className="grid place-items-center h-9 w-9 rounded-lg" style={{ background: brand.primary + "15", color: brand.primaryDark }}>
           {icon}
         </div>
         <h4 className="font-semibold">{title}</h4>
       </div>
-      <p className="text-slate-700 text-sm leading-relaxed">{children}</p>
+      <p className="text-slate-300 text-sm leading-relaxed">{children}</p>
     </div>
   );
 }

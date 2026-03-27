@@ -9,6 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #13171C;
+  color: #DDE3EA;
 }
 
 :root {
@@ -17,9 +19,9 @@ body {
   --brand-accent: #E6A24D;
   --brand-dark-bg: #1B1F24;
   --brand-light-bg: #F6F3EE;
-  /* Navajo-inspired subtle surfaces */
-  --tone-sand-50: #F6EFE8; /* soft sand */
-  --tone-sage-50: #EEF3EF; /* soft sage */
+  /* Dark mode surfaces */
+  --tone-sand-50: #17191E; /* dark sand */
+  --tone-sage-50: #141C1F; /* dark sage */
 }
 
 a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
@@ -223,7 +225,7 @@ header nav a[data-active="true"] { color: var(--brand-primary-dark); }
   width: 100%;
   background: radial-gradient(circle at 40% 30%, rgba(28, 166, 166, 0.16), transparent 60%),
               radial-gradient(circle at 75% 70%, rgba(230, 162, 77, 0.18), transparent 65%),
-              #ffffff;
+              #1E2530;
   border: 1px solid rgba(12, 107, 107, 0.16);
   box-shadow: 0 14px 24px rgba(12, 107, 107, 0.09);
   padding: 1.1rem 0.9rem;
@@ -283,7 +285,7 @@ header nav a[data-active="true"] { color: var(--brand-primary-dark); }
 .step-title {
   font-weight: 700;
   font-size: 0.82rem;
-  color: #0f172a;
+  color: #DDE3EA;
   text-transform: uppercase;
   letter-spacing: 0.14em;
 }
@@ -292,7 +294,7 @@ header nav a[data-active="true"] { color: var(--brand-primary-dark); }
   margin-top: 0.65rem;
   font-size: 0.76rem;
   line-height: 1.45;
-  color: #475569;
+  color: #8A9AB0;
 }
 
 .step-tags {
@@ -311,8 +313,8 @@ header nav a[data-active="true"] { color: var(--brand-primary-dark); }
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: #0f172a;
-  background: rgba(12, 107, 107, 0.14);
+  color: #CBD5E1;
+  background: rgba(28, 166, 166, 0.18);
 }
 
 .process-step[data-phase="leases"] .step-tag {
