@@ -301,7 +301,7 @@ export default function SweetwaterHeliumPage() {
                 Clean, quiet, and sustainable helium production—built around respect for the land, water, and nearby families.
               </p>
               <p className="text-base font-semibold uppercase tracking-[0.18em] text-slate-400">
-                100% carbon-neutral helium operations
+                Focused on responsible production and long-term stewardship.
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <a
