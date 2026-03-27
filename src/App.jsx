@@ -233,7 +233,7 @@ export default function SweetwaterHeliumPage() {
 
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#13171C]/95 backdrop-blur border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-6 h-16 flex items-center gap-8">
           <div className="flex items-center">
             <img src="/images/logo.png" alt="Sweetwater Helium" className="h-10 w-auto md:h-12" />
           </div>
