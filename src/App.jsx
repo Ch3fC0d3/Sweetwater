@@ -293,9 +293,9 @@ export default function SweetwaterHeliumPage() {
               <img
                 src="/images/logo.png"
                 alt="Sweetwater Helium"
-                className="w-auto h-[34rem] md:h-[40rem] xl:h-[50rem]"
+                className="w-auto h-[18rem] md:h-[22rem] xl:h-[26rem]"
               />
-              <div className="mt-[-4.5rem] md:mt-[-5.5rem] lg:mt-[-6.5rem] space-y-1">
+              <div className="mt-[-2rem] md:mt-[-2.5rem] lg:mt-[-3rem] space-y-1">
                 <p className="text-lg md:text-xl" style={{ color: "#DDE3EA" }}>
                   Clean, quiet, and sustainable helium production—built around respect for the land, water, and nearby families.
                 </p>
