@@ -506,7 +506,7 @@ export default function SweetwaterHeliumPage() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Technology we’re researching</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Technology we’re utilizing</h2>
               <p className="mt-4 text-slate-300 leading-relaxed">
                 We are advancing a compact, hypersaline treatment train that integrates membrane separation with closed-loop
                 reinjection. This design minimizes surface impacts while preserving the quality of local water and soil systems.
