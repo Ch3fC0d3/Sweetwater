@@ -1,16 +1,15 @@
+functionsDirectory = "D:\\Users\\gabep\\Desktop\\SweetwaterWeb\\netlify\\functions"
+functionsDirectoryOrigin = "default"
 redirectsOrigin = "config"
 plugins = []
 headers = []
-
-[functions]
-
-[functions."*"]
 
 [build]
 publish = "D:\\Users\\gabep\\Desktop\\SweetwaterWeb\\dist"
 publishOrigin = "config"
 commandOrigin = "config"
 command = "npm run build"
+functions = "D:\\Users\\gabep\\Desktop\\SweetwaterWeb\\netlify\\functions"
 
 [build.environment]
 
@@ -25,6 +24,10 @@ command = "npm run build"
 [build.processing.js]
 
 [build.services]
+
+[functions]
+
+[functions."*"]
 
 [[redirects]]
 from = "/*"

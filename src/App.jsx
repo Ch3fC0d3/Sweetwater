@@ -706,7 +706,7 @@ export default function SweetwaterHeliumPage() {
               </p>
             </div>
             <a
-              href="mailto:info@sweetwaterhelium.com"
+              href="mailto:tom@sweetwaterhelium.com"
               className="inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 text-white ring-1 ring-white/30 hover:bg-white/20"
             >
               Contact us <ArrowRight className="h-4 w-4" />
