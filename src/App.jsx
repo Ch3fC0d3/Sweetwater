@@ -334,17 +334,17 @@ export default function SweetwaterHeliumPage() {
                   Community first
                 </a>
               </div>
+              {/* NO FRACKING badge */}
+              <div className="w-32 md:w-40 select-none" aria-hidden="true">
+                <img
+                  src="/images/NO FRACKING.png"
+                  alt="No Fracking — Protect our land, water, and future"
+                  className="w-full h-auto drop-shadow-xl"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
             </div>
-          </div>
-          {/* NO FRACKING badge — bottom right of hero */}
-          <div className="absolute bottom-6 right-6 w-64 md:w-80 lg:w-96 select-none" aria-hidden="true">
-            <img
-              src="/images/NO FRACKING.png"
-              alt="No Fracking — Protect our land, water, and future"
-              className="w-full h-auto drop-shadow-xl"
-              loading="eager"
-              decoding="async"
-            />
           </div>
         </div>
       </section>
