@@ -336,6 +336,16 @@ export default function SweetwaterHeliumPage() {
               </div>
             </div>
           </div>
+          {/* NO FRACKING badge — bottom right of hero */}
+          <div className="absolute bottom-6 right-6 w-64 md:w-80 lg:w-96 select-none" aria-hidden="true">
+            <img
+              src="/images/NO FRACKING.png"
+              alt="No Fracking — Protect our land, water, and future"
+              className="w-full h-auto drop-shadow-xl"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
         </div>
       </section>
 
@@ -568,7 +578,6 @@ export default function SweetwaterHeliumPage() {
       <section id="gallery" className="bg-[#1E2530] border-y border-white/10 reveal">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Project gallery</h2>
-          <p className="mt-2 text-slate-400">Swap these placeholders with your actual images or diagrams.</p>
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             {[
               { src: "/images/plant-enclosed.png", caption: "Low-noise plant enclosure (concept)" },
@@ -729,6 +738,7 @@ export default function SweetwaterHeliumPage() {
           </div>
         </div>
       </footer>
+
       {lightboxImage && (
         <div
           className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center px-4"
