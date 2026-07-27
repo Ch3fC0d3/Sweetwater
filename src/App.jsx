@@ -718,8 +718,8 @@ export default function SweetwaterHeliumPage() {
       <section id="prospectus" className="bg-[#1E2530] border-y border-white/10 reveal">
         <div className="mx-auto max-w-7xl px-6 py-8">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Prospectus</h2>
-          <div className="mt-4 max-w-3xl mx-auto">
-            <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '129.4118%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1em', marginBottom: '0.5em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform' }}>
+          <div className="mt-4 max-w-xl mx-auto">
+            <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '75%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1em', marginBottom: '0.5em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform' }}>
               <iframe loading="lazy" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0 }} src="https://www.canva.com/design/DAHPXrieLe0/1NPNIXVu8dXSHheLfzbOtg/view?embed" allowFullScreen={true} allow="fullscreen"></iframe>
             </div>
             <a href="https://www.canva.com/design/DAHPXrieLe0/1NPNIXVu8dXSHheLfzbOtg/view?utm_content=DAHPXrieLe0&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition text-sm">
