@@ -714,6 +714,22 @@ export default function SweetwaterHeliumPage() {
         </div>
       </section>
 
+      {/* PROSPECTUS */}
+      <section id="prospectus" className="bg-[#1E2530] border-y border-white/10 reveal">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Prospectus</h2>
+          <div className="mt-8">
+            <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '129.4118%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform' }}>
+              <iframe loading="lazy" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0 }} src="https://www.canva.com/design/DAHPXrieLe0/1NPNIXVu8dXSHheLfzbOtg/view?embed" allowFullScreen={true} allow="fullscreen"></iframe>
+            </div>
+            <a href="https://www.canva.com/design/DAHPXrieLe0/1NPNIXVu8dXSHheLfzbOtg/view?utm_content=DAHPXrieLe0&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition">
+              This One Sweetwater Helium Proposal to Navajo Nation Chapters
+            </a>
+            <span className="text-slate-400"> by Gabriel</span>
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="bg-[#0F1318]">
         <div className="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-400 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
