@@ -79,13 +79,6 @@ export default function SweetwaterHeliumPage() {
     },
     {
       id: "02",
-      title: "Leases",
-      description: "Secure exclusive helium and associated gas rights with local partners.",
-      phase: "leases",
-      tags: ["Denihotso", "Chilchinbeto"],
-    },
-    {
-      id: "03",
       title: "Data",
       description: "Analyze legacy logs, analyze seismic samples to locate most likely zones.",
       phase: "data",
@@ -93,17 +86,24 @@ export default function SweetwaterHeliumPage() {
       tags: ["Mexican Water"],
     },
     {
+      id: "03",
+      title: "Land Withdrawal",
+      description: "Advance land withdrawal coordination and approvals with local partners.",
+      phase: "leases",
+      tags: ["Denihotso", "Chilchinbeto"],
+    },
+    {
       id: "04",
+      title: "Operating Agreements",
+      description: "Align operating agreements, project responsibilities, and execution terms before drilling.",
+      phase: "agreements",
+    },
+    {
+      id: "05",
       title: "Drill",
       description: "Execute exploratory and appraisal wells to verify deliverability.",
       phase: "drill",
       status: "TOPAZ is at this phase",
-    },
-    {
-      id: "05",
-      title: "Reserves",
-      description: "Update resource models and convert to proved reserves.",
-      phase: "reserves",
     },
     {
       id: "06",

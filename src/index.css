@@ -221,7 +221,7 @@ header nav a[data-active="true"] { color: var(--brand-primary-dark); }
   --process-offset: 0px;
   border-radius: 999px;
   aspect-ratio: 1 / 1;
-  max-width: 160px;
+  max-width: 172px;
   width: 100%;
   background: radial-gradient(circle at 40% 30%, rgba(28, 166, 166, 0.16), transparent 60%),
               radial-gradient(circle at 75% 70%, rgba(230, 162, 77, 0.18), transparent 65%),
@@ -285,6 +285,7 @@ header nav a[data-active="true"] { color: var(--brand-primary-dark); }
 .step-title {
   font-weight: 700;
   font-size: 0.82rem;
+  line-height: 1.15;
   color: #DDE3EA;
   text-transform: uppercase;
   letter-spacing: 0.14em;
