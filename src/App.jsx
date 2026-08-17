@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 /**
- * Sweetwater Helium — One-page site
+ * Sweetwater Helium â€” One-page site
  *
  * FIX: Removed all stray backslashes/escaped braces that broke JSX (e.g., " and \{) which
  * triggered `Expecting Unicode escape sequence \uXXXX` during TSX parsing.
@@ -58,7 +58,7 @@ export default function SweetwaterHeliumPage() {
     },
     {
       slug: "melting",
-      title: "Melting point −272°C",
+      title: "Melting point âˆ’272Â°C",
       description: "Liquid at ultra-cool temps enables superconductivity.",
       Icon: ThermometerSnowflake,
     },
@@ -83,20 +83,21 @@ export default function SweetwaterHeliumPage() {
       description: "Analyze legacy logs, analyze seismic samples to locate most likely zones.",
       phase: "data",
       status: "TUNU is at this phase",
-      tags: ["Mexican Water"],
+
     },
     {
       id: "03",
       title: "Land Withdrawal",
       description: "Advance land withdrawal coordination and approvals with local partners.",
       phase: "leases",
-      tags: ["Denihotso", "Chilchinbeto"],
+      tags: ["Denihotso"],
     },
     {
       id: "04",
       title: "Operating Agreements",
       description: "Align operating agreements, project responsibilities, and execution terms before drilling.",
       phase: "agreements",
+      tags: ["Mexican Water", "Chilchinbeto"],
     },
     {
       id: "05",
@@ -315,7 +316,7 @@ export default function SweetwaterHeliumPage() {
             </div>
             <div className="max-w-xl space-y-6">
               <p className="text-3xl md:text-4xl leading-snug font-medium" style={{ color: "#DDE3EA" }}>
-                Clean, quiet, and sustainable helium production—built around respect for the land, water, and nearby families.
+                Clean, quiet, and sustainable helium productionâ€”built around respect for the land, water, and nearby families.
               </p>
               <p className="text-base font-semibold uppercase tracking-[0.18em] text-slate-400">
                 Focused on responsible production and long-term stewardship.
@@ -345,7 +346,7 @@ export default function SweetwaterHeliumPage() {
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Project overview</h2>
             <p className="mt-4 text-slate-300">
-              In nearby legacy oil exploration, companies found deep ancient seawater over a mile down—mixed with trapped ancient air. Over geologic time, unique conditions enriched this air with helium. Sweetwater proposes a dedicated helium well to responsibly access this resource, with commitments to local jobs, infrastructure, education, and full site restoration.
+              In nearby legacy oil exploration, companies found deep ancient seawater over a mile downâ€”mixed with trapped ancient air. Over geologic time, unique conditions enriched this air with helium. Sweetwater proposes a dedicated helium well to responsibly access this resource, with commitments to local jobs, infrastructure, education, and full site restoration.
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-[#1E2530] p-6 shadow-sm">
@@ -502,7 +503,7 @@ export default function SweetwaterHeliumPage() {
             <div className="rounded-2xl border border-white/10 p-6 bg-[#1E2530]">
               <h3 className="text-lg font-semibold">Our commitments</h3>
               <ul className="mt-3 list-disc pl-5 text-slate-300 space-y-2">
-                <li>Independent monitoring of air, water, and sound—shared publicly.</li>
+                <li>Independent monitoring of air, water, and soundâ€”shared publicly.</li>
                 <li>Trust-funded reserves for future well plugging & site restoration.</li>
                 <li>Infrastructure funding with community input.</li>
                 <li>Respect for cultural sites and community calendars in planning.</li>
@@ -523,7 +524,7 @@ export default function SweetwaterHeliumPage() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Technology we’re utilizing</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Technology weâ€™re utilizing</h2>
               <p className="mt-4 text-slate-300 leading-relaxed">
                 We are advancing a compact, hypersaline treatment train that integrates membrane separation with closed-loop
                 reinjection. This design minimizes surface impacts while preserving the quality of local water and soil systems.
@@ -633,7 +634,7 @@ export default function SweetwaterHeliumPage() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-10">In the news</h2>
           {newsLoading ? (
-            <div className="text-slate-400">Loading news…</div>
+            <div className="text-slate-400">Loading newsâ€¦</div>
           ) : newsArticles.length === 0 ? (
             <div className="text-slate-400">No articles found.</div>
           ) : (
@@ -699,7 +700,7 @@ export default function SweetwaterHeliumPage() {
         <div className="mx-auto max-w-7xl px-6 py-16 text-white">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Let’s talk helium</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Letâ€™s talk helium</h2>
               <p className="mt-2 text-slate-300 max-w-2xl">
                 Ready to collaborate or learn more about our work? Reach out to us anytime.
               </p>
@@ -733,7 +734,7 @@ export default function SweetwaterHeliumPage() {
       {/* FOOTER */}
       <footer className="bg-[#0F1318]">
         <div className="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-400 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-          <div>© {new Date().getFullYear()} {brand.name}. All rights reserved.</div>
+          <div>Â© {new Date().getFullYear()} {brand.name}. All rights reserved.</div>
           <div className="flex items-center gap-4">
             <a href="#mission" className="hover:text-white">
               Mission
