@@ -10,10 +10,14 @@ import {
   ThermometerSnowflake,
   Search,
   X,
+  FileText,
+  Download,
+  Eye,
+  ArrowLeft,
 } from "lucide-react";
 
 /**
- * Sweetwater Helium â€” One-page site
+ * Sweetwater Helium — One-page site
  *
  * FIX: Removed all stray backslashes/escaped braces that broke JSX (e.g., " and \{) which
  * triggered `Expecting Unicode escape sequence \uXXXX` during TSX parsing.
@@ -36,7 +40,41 @@ const brand = {
   muted: "#94A3B8",
 };
 
-export default function SweetwaterHeliumPage() {
+const documents = [
+  {
+    slug: "chapter-proposal",
+    title: "Navajo Nation Chapters Proposal",
+    description: "Complete 26-page proposal covering the project, operating approach, community benefits, and environmental commitments.",
+    pages: 26,
+    file: "/documents/chapter-proposal.pdf",
+    cover: "/documents/covers/chapter-proposal.jpg",
+  },
+  {
+    slug: "chapter-introduction",
+    title: "Introduction for Navajo Nation Chapters",
+    description: "A concise two-page introduction to Sweetwater Helium, the proposed project areas, and the partnership framework.",
+    pages: 2,
+    file: "/documents/chapter-introduction.pdf",
+    cover: "/documents/covers/chapter-introduction.jpg",
+  },
+  {
+    slug: "investor-proposal",
+    title: "Investor Proposal",
+    description: "A two-page investor overview of the domestic helium opportunity, strategic advantages, and long-term potential.",
+    pages: 2,
+    file: "/documents/investor-proposal.pdf",
+    cover: "/documents/covers/investor-proposal.jpg",
+  },
+];
+
+export default function App() {
+  if (window.location.pathname.startsWith("/documents")) {
+    return <DocumentsPage />;
+  }
+  return <SweetwaterHeliumPage />;
+}
+
+function SweetwaterHeliumPage() {
   const heliumProperties = [
     {
       slug: "inert",
@@ -58,7 +96,7 @@ export default function SweetwaterHeliumPage() {
     },
     {
       slug: "melting",
-      title: "Melting point âˆ’272Â°C",
+      title: "Melting point −272°C",
       description: "Liquid at ultra-cool temps enables superconductivity.",
       Icon: ThermometerSnowflake,
     },
@@ -83,21 +121,20 @@ export default function SweetwaterHeliumPage() {
       description: "Analyze legacy logs, analyze seismic samples to locate most likely zones.",
       phase: "data",
       status: "TUNU is at this phase",
-
+      tags: ["Mexican Water"],
     },
     {
       id: "03",
       title: "Land Withdrawal",
       description: "Advance land withdrawal coordination and approvals with local partners.",
       phase: "leases",
-      tags: ["Denihotso"],
+      tags: ["Denihotso", "Chilchinbeto"],
     },
     {
       id: "04",
       title: "Operating Agreements",
       description: "Align operating agreements, project responsibilities, and execution terms before drilling.",
       phase: "agreements",
-      tags: ["Mexican Water", "Chilchinbeto"],
     },
     {
       id: "05",
@@ -286,6 +323,9 @@ export default function SweetwaterHeliumPage() {
             <a href="#news" className="hover:text-white">
               News
             </a>
+            <a href="/documents" className="hover:text-white">
+              Documents
+            </a>
             <a href="#contact" className="hover:text-white">
               Contact
             </a>
@@ -316,7 +356,7 @@ export default function SweetwaterHeliumPage() {
             </div>
             <div className="max-w-xl space-y-6">
               <p className="text-3xl md:text-4xl leading-snug font-medium" style={{ color: "#DDE3EA" }}>
-                Clean, quiet, and sustainable helium productionâ€”built around respect for the land, water, and nearby families.
+                Clean, quiet, and sustainable helium production—built around respect for the land, water, and nearby families.
               </p>
               <p className="text-base font-semibold uppercase tracking-[0.18em] text-slate-400">
                 Focused on responsible production and long-term stewardship.
@@ -346,7 +386,7 @@ export default function SweetwaterHeliumPage() {
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Project overview</h2>
             <p className="mt-4 text-slate-300">
-              In nearby legacy oil exploration, companies found deep ancient seawater over a mile downâ€”mixed with trapped ancient air. Over geologic time, unique conditions enriched this air with helium. Sweetwater proposes a dedicated helium well to responsibly access this resource, with commitments to local jobs, infrastructure, education, and full site restoration.
+              In nearby legacy oil exploration, companies found deep ancient seawater over a mile down—mixed with trapped ancient air. Over geologic time, unique conditions enriched this air with helium. Sweetwater proposes a dedicated helium well to responsibly access this resource, with commitments to local jobs, infrastructure, education, and full site restoration.
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-[#1E2530] p-6 shadow-sm">
@@ -503,7 +543,7 @@ export default function SweetwaterHeliumPage() {
             <div className="rounded-2xl border border-white/10 p-6 bg-[#1E2530]">
               <h3 className="text-lg font-semibold">Our commitments</h3>
               <ul className="mt-3 list-disc pl-5 text-slate-300 space-y-2">
-                <li>Independent monitoring of air, water, and soundâ€”shared publicly.</li>
+                <li>Independent monitoring of air, water, and sound—shared publicly.</li>
                 <li>Trust-funded reserves for future well plugging & site restoration.</li>
                 <li>Infrastructure funding with community input.</li>
                 <li>Respect for cultural sites and community calendars in planning.</li>
@@ -524,7 +564,7 @@ export default function SweetwaterHeliumPage() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Technology weâ€™re utilizing</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Technology we’re utilizing</h2>
               <p className="mt-4 text-slate-300 leading-relaxed">
                 We are advancing a compact, hypersaline treatment train that integrates membrane separation with closed-loop
                 reinjection. This design minimizes surface impacts while preserving the quality of local water and soil systems.
@@ -569,6 +609,7 @@ export default function SweetwaterHeliumPage() {
       <section id="gallery" className="bg-[#1E2530] border-y border-white/10 reveal">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Project gallery</h2>
+          <p className="mt-2 text-slate-400">Swap these placeholders with your actual images or diagrams.</p>
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             {[
               { src: "/images/plant-enclosed.png", caption: "Low-noise plant enclosure (concept)" },
@@ -634,7 +675,7 @@ export default function SweetwaterHeliumPage() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-10">In the news</h2>
           {newsLoading ? (
-            <div className="text-slate-400">Loading newsâ€¦</div>
+            <div className="text-slate-400">Loading news…</div>
           ) : newsArticles.length === 0 ? (
             <div className="text-slate-400">No articles found.</div>
           ) : (
@@ -700,7 +741,7 @@ export default function SweetwaterHeliumPage() {
         <div className="mx-auto max-w-7xl px-6 py-16 text-white">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Letâ€™s talk helium</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Let’s talk helium</h2>
               <p className="mt-2 text-slate-300 max-w-2xl">
                 Ready to collaborate or learn more about our work? Reach out to us anytime.
               </p>
@@ -715,26 +756,10 @@ export default function SweetwaterHeliumPage() {
         </div>
       </section>
 
-      {/* PROSPECTUS */}
-      <section id="prospectus" className="bg-[#1E2530] border-y border-white/10 reveal">
-        <div className="mx-auto max-w-7xl px-6 py-8">
-          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Prospectus</h2>
-          <div className="mt-4 max-w-xl mx-auto">
-            <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '75%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1em', marginBottom: '0.5em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform' }}>
-              <iframe loading="lazy" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0 }} src="https://www.canva.com/design/DAHPXrieLe0/1NPNIXVu8dXSHheLfzbOtg/view?embed" allowFullScreen={true} allow="fullscreen"></iframe>
-            </div>
-            <a href="https://www.canva.com/design/DAHPXrieLe0/1NPNIXVu8dXSHheLfzbOtg/view?utm_content=DAHPXrieLe0&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition text-sm">
-              This One Sweetwater Helium Proposal to Navajo Nation Chapters
-            </a>
-            <span className="text-slate-400 text-sm"> by Gabriel</span>
-          </div>
-        </div>
-      </section>
-
       {/* FOOTER */}
       <footer className="bg-[#0F1318]">
         <div className="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-400 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-          <div>Â© {new Date().getFullYear()} {brand.name}. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} {brand.name}. All rights reserved.</div>
           <div className="flex items-center gap-4">
             <a href="#mission" className="hover:text-white">
               Mission
@@ -742,10 +767,12 @@ export default function SweetwaterHeliumPage() {
             <a href="#community" className="hover:text-white">
               Community
             </a>
+            <a href="/documents" className="hover:text-white">
+              Documents
+            </a>
           </div>
         </div>
       </footer>
-
       {lightboxImage && (
         <div
           className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center px-4"
@@ -771,6 +798,111 @@ export default function SweetwaterHeliumPage() {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+function DocumentsPage() {
+  const slug = window.location.pathname.split("/").filter(Boolean)[1];
+  const selected = documents.find((document) => document.slug === slug);
+
+  if (slug && !selected) {
+    return (
+      <main className="min-h-screen grid place-items-center bg-[#13171C] px-6 text-slate-100">
+        <div className="max-w-lg text-center">
+          <FileText className="mx-auto h-12 w-12 text-cyan-400" />
+          <h1 className="mt-5 text-3xl font-extrabold">Document not found</h1>
+          <a href="/documents" className="mt-7 inline-flex items-center gap-2 rounded-full bg-cyan-700 px-5 py-3 font-semibold hover:bg-cyan-600">
+            <ArrowLeft className="h-4 w-4" /> View all documents
+          </a>
+        </div>
+      </main>
+    );
+  }
+
+  if (selected) {
+    return (
+      <div className="min-h-screen bg-[#13171C] text-slate-100">
+        <header className="border-b border-white/10 bg-[#0F1318]">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4">
+            <a href="/" aria-label="Sweetwater Helium home">
+              <img src="/images/logo.png" alt="Sweetwater Helium" className="h-11 w-auto" />
+            </a>
+            <div className="flex flex-wrap items-center gap-3">
+              <a href="/documents" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-semibold hover:bg-white/10">
+                <ArrowLeft className="h-4 w-4" /> All documents
+              </a>
+              <a href={selected.file} download className="inline-flex items-center gap-2 rounded-full bg-cyan-700 px-4 py-2 text-sm font-semibold hover:bg-cyan-600">
+                <Download className="h-4 w-4" /> Download PDF
+              </a>
+            </div>
+          </div>
+        </header>
+        <main className="mx-auto max-w-7xl px-4 py-7 md:px-6">
+          <div className="mb-5">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400">Sweetwater Helium document</p>
+            <h1 className="mt-2 text-2xl font-extrabold md:text-3xl">{selected.title}</h1>
+            <p className="mt-1 text-sm text-slate-400">{selected.pages} pages · Use the PDF controls to move between pages, zoom, or print.</p>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl">
+            <object data={`${selected.file}#view=FitH`} type="application/pdf" className="h-[76vh] min-h-[620px] w-full" aria-label={selected.title}>
+              <div className="grid min-h-[620px] place-items-center bg-[#1E2530] p-8 text-center">
+                <div>
+                  <FileText className="mx-auto h-12 w-12 text-cyan-400" />
+                  <p className="mt-4 text-lg font-semibold">Your browser cannot display the reader here.</p>
+                  <a href={selected.file} className="mt-5 inline-flex items-center gap-2 rounded-full bg-cyan-700 px-5 py-3 font-semibold">
+                    <Eye className="h-4 w-4" /> Open the PDF
+                  </a>
+                </div>
+              </div>
+            </object>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-[#13171C] text-slate-100">
+      <header className="border-b border-white/10 bg-[#0F1318]">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <a href="/" aria-label="Sweetwater Helium home">
+            <img src="/images/logo.png" alt="Sweetwater Helium" className="h-12 w-auto" />
+          </a>
+          <a href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 hover:text-white">
+            <ArrowLeft className="h-4 w-4" /> Main site
+          </a>
+        </div>
+      </header>
+      <main className="mx-auto max-w-7xl px-6 py-14 md:py-20">
+        <div className="max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">Resource library</p>
+          <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">Sweetwater Helium documents</h1>
+          <p className="mt-5 text-lg leading-relaxed text-slate-300">Select a document to read it online, move through its pages, or download a copy.</p>
+        </div>
+        <div className="mt-12 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+          {documents.map((document) => (
+            <article key={document.slug} className="group overflow-hidden rounded-2xl border border-white/10 bg-[#1E2530] shadow-xl transition hover:-translate-y-1 hover:border-cyan-500/40">
+              <a href={`/documents/${document.slug}`} className="block aspect-[8.5/11] overflow-hidden bg-slate-100">
+                <img src={document.cover} alt={`Cover of ${document.title}`} className="h-full w-full object-cover object-top transition duration-300 group-hover:scale-[1.02]" />
+              </a>
+              <div className="p-6">
+                <p className="text-xs font-bold uppercase tracking-widest text-cyan-400">{document.pages} pages</p>
+                <h2 className="mt-2 text-xl font-bold leading-snug">{document.title}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">{document.description}</p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a href={`/documents/${document.slug}`} className="inline-flex items-center gap-2 rounded-full bg-cyan-700 px-4 py-2.5 text-sm font-semibold hover:bg-cyan-600">
+                    <Eye className="h-4 w-4" /> Read online
+                  </a>
+                  <a href={document.file} download className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2.5 text-sm font-semibold hover:bg-white/10">
+                    <Download className="h-4 w-4" /> Download
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </main>
     </div>
   );
 }
@@ -824,4 +956,3 @@ function Usecard({ icon, title, children, imageSrc, imageAlt, onImageClick }) {
 .animate-ping-slow { animation: ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite; }
 @keyframes ping { 75%, 100% { transform: scale(1.1); opacity: 0; } }
 */
-
